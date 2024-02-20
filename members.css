@@ -1,0 +1,375 @@
+*{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background: #000;
+    height: 100vh;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 10px;
+    padding: 40px 100px;
+    z-index: 100000;
+  }
+  header.sticky{
+    padding: 5px 100px;
+  }
+  header .logo{
+    position: relative;
+    padding: 5px auto;
+    cursor: pointer;
+    transition: 0.6s;
+  }
+  header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+  }
+  
+  header a button{
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.6s
+  }
+  header a button:hover{
+    background-color: #ed6a6a;
+    color: black;
+  }
+  
+  header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+  }
+  
+  header ul li a:hover{
+    color: #ed6a6a;
+  }
+  
+  .banner{
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    background: url(images/squad-blur.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    background-position: center;
+  }
+  
+  header.sticky .logo, header.sticky ul li a{
+    color: #fff;
+  }
+.eexplain{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 200px;
+  padding: 30px;
+}
+
+.explain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 50px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.explain h2{
+  text-shadow: 1.5px 1.5px 2px rgb(190, 163, 163);
+}
+
+.toggle-sections{
+  position: relative;
+  top: 250px;
+  padding: 30px;
+ }
+ 
+ 
+ .se1, .se2, .se3{
+  label{
+    border-bottom: 1px solid #27353d;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 15px 20px;
+    margin: 0;
+    color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    &::after{
+      content: "\271B";
+      position: absolute;
+      right: 20px;
+      top: 30px;
+      transform: translateY(-50%);
+      color: #fff;
+      opacity: 0.5;
+      font-weight: 100;
+      font-size: 16px;
+    }
+  }
+  .content-area{
+    color: #989797;
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    transition: all 0.6s ease;
+    opacity: 0;
+    * {
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+  }
+  input{
+    display: none;
+    &:checked + label + .content-area{
+      max-height: 100vh;
+      visibility: visible;
+      opacity: 1;
+      padding: 20px;
+      *{
+        opacity: 1;
+      }
+     }
+    &:checked + label::after{ 
+      content: "\268A";
+      right: 20px;
+      top: 25px;
+    }
+  }
+ }
+
+ .content-area .img-p1{
+  position: relative;
+  
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+ }
+ .content-area .img-p1 p{
+  padding: 20px;
+  
+  width: 400px;
+
+ }
+ .content-area .img-p1 img{
+  border-radius: 20px;
+ }
+ .content-area .img-p1 .genre{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+ }
+ 
+ .content-area .img-p1 .genre .action1{
+  padding: 10px;
+ }
+
+ .content-area .img-p1 .genre-p1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+
+
+
+
+
+ .content-area .img-p2{
+  position: relative;
+  
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+ }
+ .content-area .img-p2 p{
+  padding: 20px;
+  
+  width: 400px;
+
+ }
+ .content-area .img-p2 img{
+  border-radius: 20px;
+ }
+ .content-area .img-p2 .genre2{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+ }
+ 
+ .content-area .img-p2 .genre2 .action2{
+  padding: 10px;
+ }
+
+ .content-area .img-p2 .genre-p2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+
+
+
+
+
+
+ .content-area .img-p3{
+  position: relative;
+  
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+ }
+ .content-area .img-p3 p{
+  padding: 20px;
+  
+  width: 400px;
+
+ }
+ .content-area .img-p3 img{
+  border-radius: 20px;
+ }
+ .content-area .img-p3 .genre3{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+ }
+ 
+ .content-area .img-p3 .genre3 .action3{
+  padding: 10px;
+ }
+
+ .content-area .img-p3 .genre-p3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+
+
+
+ footer{
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  background-size: cover;
+  background: url(images/skyrim-blurred.jpg);
+  width: 100%;
+  height: 40vh;
+  transition: 0.6s;
+  box-shadow: 5px 5px 200px rgb(0, 0, 0) inset;
+}
+
+
+.copyright-h1{
+  padding: 15px;
+  font-size: 1.2rem;
+  color: rgb(252, 252, 252);
+}
+.copyright-p{
+  color: rgb(252, 252, 252);
+  padding: 5px;
+}
+
+.footer-content{
+  position: absolute;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.footer-content .top-devider{
+  padding: 20px;
+}
+.footer-content .bottom-devider{
+  padding: 20px;
+}
+.footer-buttons ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  list-style-type: none;
+  transition: 0.6s;
+  padding: 20px;
+}
+
+.footer-buttons ul li{
+  padding: 5px;
+}
+.footer-buttons ul li i{
+  font-size: 23px;
+}
+.footer-buttons ul li a{
+  padding: 5px;
+}
+
+.footer-buttons ul li a button{
+  position: relative;
+  width: 80px;
+  height: 40px;
+  border-radius: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.6s
+}
+.footer-buttons ul li a button:hover{
+  background-color: #ed6a6a;
+  color: black;
+}
+.footer-lorem{
+  color: rgb(252, 252, 252);
+  padding: 15px;
+}
